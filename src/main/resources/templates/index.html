@@ -8,8 +8,11 @@
 <body>
     <h1>Nuestro CV</h1>
     <p th:text="'Hola, ' + ${name} + ' ! ' ">Texto por defecto</p>
-    <p th:text="${persona.firstName}"></p>
-    <p th:text="${persona.lastName}"></p>
-    <p th:text="${persona.profession}"></p>
+    <p th:if="${name.length < 3}" style="color: red;" >Error, el nombre tiene menos de 3 letras...</p>
+    <p th:if="${name.length >= 3}" style="color: green;" >El nombre es válido.</p>
+
+<!--    <p th:text="${persona.firstName}"></p>-->
+<!--    <p th:text="${persona.lastName}"></p>-->
+<!--    <p th:text="${persona.profession}"></p>-->
 </body>
 </html>
