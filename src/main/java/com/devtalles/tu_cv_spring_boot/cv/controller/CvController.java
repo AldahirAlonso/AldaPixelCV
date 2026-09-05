@@ -18,5 +18,5 @@ public class CvController {
         model.addAttribute("persona", person);
         return "index";
     }
-    
+
 }
